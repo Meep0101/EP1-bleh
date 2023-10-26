@@ -8,10 +8,14 @@ public enum Category {
     Floor
 }
 
+
+
 [CreateAssetMenu (fileName = "Buildable", menuName = "BuildingObjects/Create Buildable")]
 public class BuildingObjectBase : ScriptableObject {
-    [SerializeField] Category category;
+    [SerializeField] BuildingCategory category;
+    [SerializeField] UICategory uiCategory;
     [SerializeField] TileBase tileBase;
+    [SerializeField] PlaceType placeType;
 
     public TileBase TileBase {
         get {
@@ -19,9 +23,21 @@ public class BuildingObjectBase : ScriptableObject {
         }
     }
 
-    public Category Category {
+    public PlaceType PlaceType{
+        get {
+            return placeType == PlaceType.None ? category.PlaceType : placeType;
+        }
+    }
+
+    public BuildingCategory Category {
         get {
             return category;
+        }
+    }
+
+    public UICategory UICategory{
+        get {
+            return UICategory;
         }
     }
 

@@ -29,21 +29,21 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""MouseLeftClick"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""81e927ee-255f-4bee-9b59-57641350ee3e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""interactions"": ""Tap,SlowTap"",
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""MouseRightClick"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""7031c3ff-fabf-43e7-a51b-65ccd6dd4052"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""MousePosition"",
